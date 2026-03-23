@@ -250,7 +250,7 @@ body.dark-mode .toggle-label .moon { opacity: 1; }
     height: 100%;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 40px 3rem;
+    padding: 3.5rem 3rem 4rem;
 }
 
 /* Background watermark */
@@ -658,6 +658,9 @@ body.dark-mode .toggle-label .moon { opacity: 1; }
 
     /* Theme toggle */
     .theme-toggle-fixed { bottom: 1.4rem; right: 1.4rem; }
+
+    /* Footer mobile */
+    .page-footer { padding: 2rem 1.4rem; font-size: 10px; }
 }
 
 /* ═══════════════════════════════════════════════════
@@ -689,4 +692,7 @@ body.dark-mode .toggle-label .moon { opacity: 1; }
     .bg-mark { --bg-size: clamp(100px, 35vw, 180px); }
 
     .theme-toggle-fixed { bottom: 1rem; right: 1rem; }
+
+    /* Footer mobile small */
+    .page-footer { padding: 1.5rem 1.2rem; font-size: 9px; }
 }
