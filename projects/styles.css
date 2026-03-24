@@ -342,6 +342,15 @@ body {
 }
 .project-card:hover .overlay-cta { transform: translateY(0); }
 
+/* ── Thumbnail link wrapper ── */
+.card-thumb-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+}
+
 /* ═══════════════════════════════════════════════════
    CARD BODY
 ═══════════════════════════════════════════════════ */
