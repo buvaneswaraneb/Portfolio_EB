@@ -103,11 +103,22 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // Hamburger Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
+const navOverlay = document.querySelector('.nav-overlay');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    navOverlay?.classList.toggle('visible');
 });
+
+// Close menu when clicking overlay
+if (navOverlay) {
+    navOverlay.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        navOverlay.classList.remove('visible');
+    });
+}
 
 // Scroll Progress Bar
 window.addEventListener('scroll', () => {

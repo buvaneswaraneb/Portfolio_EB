@@ -27,25 +27,24 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-<a href="../index.html" style="text-decoration: none; color: inherit;">
-  <div class="logo">BUVANESWARAN E</div>
-</a>
-            
-            <!-- Hamburger Menu -->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">HOME</a></li>
-                <li><a href="https://github.com/BhuvaneshGg?tab=repositories" class="nav-link active">PROJECTS</a></li>
-                <li><a href="#home" class="nav-link"><span class="bracket">{</span> ABOUT <span class="bracket">}</span></a></li>
-            </ul>
-        </div>
+        <a href="../index.html" class="logo">BUVANESWARAN E</a>
+        
+        <!-- Hamburger Menu -->
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link">HOME</a></li>
+            <li><a href="../projects/index.html" class="nav-link">PROJECTS</a></li>
+            <li><a href="#home" class="nav-link active">{ ABOUT }</a></li>
+        </ul>
     </nav>
+
+    <!-- Mobile drawer overlay -->
+    <div class="nav-overlay"></div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -79,6 +78,11 @@ A third-year student aspiring to become a Software Developer, skilled in <strong
         <!-- Large Background Text -->
         <div class="bg-text">INFO</div>
     </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <p>&copy; 2025 Buvaneswaran E — All rights reserved.</p>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
