@@ -27,26 +27,29 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="index.html" class="logo">BUVANESWARAN E</a>
-        
-        <!-- Hamburger Menu -->
-        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
-        <ul class="nav-menu">
-            <li><a href="#home" class="nav-link active">{ HOME }</a></li>
-            <li><a href="projects/index.html" class="nav-link">PROJECTS</a></li>
-            <li><a href="./aboutpg/index.html" class="nav-link">ABOUT</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <div class="logo">BUVANESWARAN E</div>
+            </a>
+            
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link"><span class="bracket">{</span> HOME <span class="bracket">}</span></a></li>
+                <li><a href="projects/index.html" class="nav-link active">PROJECTS</a></li>
+                <li><a href="./aboutpg/index.html" class="nav-link">ABOUT</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Mobile drawer overlay -->
-    <div class="nav-overlay"></div>
-
-    <!-- Hero Section -->
+    <!-- ─────────────────────────────────────────────────────────────
+         HERO SECTION — unchanged, desktop layout preserved
+    ───────────────────────────────────────────────────────────────── -->
     <section class="hero" id="home">
         <!-- Large Background Mark -->
         <span class="bg-mark">EBB</span>
@@ -55,35 +58,147 @@
             <!-- Main Title with Typing Effect -->
             <h1 id="hero-title" class="hero-title">BUVANESWARAN E</h1>
             
-            <!-- Location -->
-            <span class="location"><a href="https://share.google/up9NtTkejB7Ia9LZd" style="text-decoration: none; color: inherit;">CHENNAI, TAMILNADU </a></span>
-            
             <!-- Role Labels -->
             <span class="role-java">JAVA DEVELOPER (IN DREAM)</span>
             <span class="role-python">PYTHON DEVELOPER</span>
             
-            <!-- Latest Project Section -->
+            <!-- Location -->
+            <span class="location">
+                <a href="https://share.google/up9NtTkejB7Ia9LZd" style="text-decoration: none; color: inherit;">
+                    CHENNAI, TAMILNADU
+                </a>
+            </span>
+            
+            <!-- Stamp/Badge -->
+            <div class="stamp"></div>
+            
+            <!-- Latest Project Label (desktop only) -->
             <span class="latest-project">LATEST PROJECT</span>
-            <div class="project-card"> <a href="https://github.com/BhuvaneshGg/AI-Vulnerability-Extension" style="text-decoration: none; color: inherit;">
-                <div class="project-content">
-                    <h3 class="project-title">AI-Vulnerability-Extension</h3>
-                    <p class="project-description">A Visual Studio Extension To Find the Vulnerablites</p>
-                    <div class="project-tags">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">API</span>
-                        <span class="tag">Deepseek</span>
-                        <span class="tag">CyberSecurity</span>
+
+            <!-- Original project card (desktop only) -->
+            <div class="project-card">
+                <a href="https://github.com/BhuvaneshGg/AI-Vulnerability-Extension" style="text-decoration: none; color: inherit;">
+                    <div class="project-content">
+                        <h3 class="project-title">AI-Vulnerability-Extension</h3>
+                        <p class="project-description">A Visual Studio Extension To Find the Vulnerabilities</p>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">API</span>
+                            <span class="tag">Deepseek</span>
+                            <span class="tag">CyberSecurity</span>
+                        </div>
                     </div>
-                </div>
-            </a></div>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="page-footer">
-        <p>&copy; 2025 Buvaneswaran E — All rights reserved.</p>
-    </footer>
+    <!-- ─────────────────────────────────────────────────────────────
+         STACKED PROJECT CARDS — mobile only (hidden on desktop)
+         Sits below the hero in the DOM flow.
+         On mobile the hero shrinks to ~40vh, this section fills the rest.
+    ───────────────────────────────────────────────────────────────── -->
+    <section class="stack-section" aria-label="Latest Projects">
+
+        <!-- Header row: label + counter -->
+        <div class="stack-header">
+            <span class="stack-label">LATEST PROJECTS</span>
+            <span class="stack-counter">
+                <span id="stackCurrent">01</span>
+                <span class="stack-sep"> / </span>
+                <span id="stackTotal">04</span>
+            </span>
+        </div>
+
+        <!-- The card stack -->
+        <div class="stack-wrapper" id="stackWrapper">
+
+            <!-- PROJECT 01 -->
+            <div class="stack-card" data-index="0">
+                <div class="stack-visual" style="--chue:12;">
+                    <span class="stack-num">01</span>
+                </div>
+                <div class="stack-info">
+                    <h3 class="stack-title">AI Vulnerability Scanner</h3>
+                    <p class="stack-desc">VS Code extension using AI to detect security vulnerabilities with severity levels and actionable fixes.</p>
+                    <div class="stack-tags">
+                        <span class="s-tag">TypeScript</span>
+                        <span class="s-tag">Python</span>
+                        <span class="s-tag">Hugging Face</span>
+                    </div>
+                    <a href="projects/project/project_1/project_1.html" class="stack-cta">View Project <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- PROJECT 02 -->
+            <div class="stack-card" data-index="1">
+                <div class="stack-visual" style="--chue:195;">
+                    <span class="stack-num">02</span>
+                </div>
+                <div class="stack-info">
+                    <h3 class="stack-title">LEAP VITAL CARE</h3>
+                    <p class="stack-desc">Real-time IoT patient monitoring with live vitals, GPS tracking, and emergency alerts.</p>
+                    <div class="stack-tags">
+                        <span class="s-tag">ESP32</span>
+                        <span class="s-tag">Flask</span>
+                        <span class="s-tag">Chart.js</span>
+                    </div>
+                    <a href="projects/project/project_2/project-leap-vital-care.html" class="stack-cta">View Project <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- PROJECT 03 -->
+            <div class="stack-card" data-index="2">
+                <div class="stack-visual" style="--chue:105;">
+                    <span class="stack-num">03</span>
+                </div>
+                <div class="stack-info">
+                    <h3 class="stack-title">Web Automation Bot</h3>
+                    <p class="stack-desc">Python bot that logs in and collects daily rewards automatically, with a polished desktop GUI.</p>
+                    <div class="stack-tags">
+                        <span class="s-tag">Python</span>
+                        <span class="s-tag">Selenium</span>
+                        <span class="s-tag">CustomTkinter</span>
+                    </div>
+                    <a href="#" class="stack-cta">Coming Soon <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- PROJECT 04 -->
+            <div class="stack-card" data-index="3">
+                <div class="stack-visual" style="--chue:270;">
+                    <span class="stack-num">04</span>
+                </div>
+                <div class="stack-info">
+                    <div class="stack-title-row">
+                        <h3 class="stack-title">Manhwa Tracker</h3>
+                        <span class="stack-wip">In Progress</span>
+                    </div>
+                    <p class="stack-desc">Cross-platform app to track manhwa series with automated data fetching and reading lists.</p>
+                    <div class="stack-tags">
+                        <span class="s-tag">Flutter</span>
+                        <span class="s-tag">Spring Boot</span>
+                        <span class="s-tag">PostgreSQL</span>
+                    </div>
+                    <a href="#" class="stack-cta">In Progress <span>→</span></a>
+                </div>
+            </div>
+
+        </div><!-- /stack-wrapper -->
+
+        <!-- Dot navigation -->
+        <div class="stack-dots" id="stackDots">
+            <button class="stack-dot" data-idx="0" aria-label="Project 1"></button>
+            <button class="stack-dot" data-idx="1" aria-label="Project 2"></button>
+            <button class="stack-dot" data-idx="2" aria-label="Project 3"></button>
+            <button class="stack-dot" data-idx="3" aria-label="Project 4"></button>
+        </div>
+
+        <!-- Swipe hint — hides after first interaction -->
+        <p class="stack-hint" id="stackHint">← SWIPE TO EXPLORE →</p>
+
+    </section><!-- /stack-section -->
 
     <script src="main.js"></script>
 </body>
