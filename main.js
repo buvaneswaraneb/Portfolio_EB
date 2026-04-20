@@ -6,6 +6,14 @@
 const themeSwitch = document.getElementById('theme-switch');
 const body = document.body;
 
+// Force dark mode globally for now
+body.classList.add('dark-mode');
+if (themeSwitch) {
+    themeSwitch.checked = true;
+    themeSwitch.disabled = true;
+}
+
+/*
 const currentTheme = sessionStorage.getItem('theme') || 'light';
 if (currentTheme === 'dark') {
     body.classList.add('dark-mode');
@@ -21,6 +29,7 @@ themeSwitch.addEventListener('change', function () {
         sessionStorage.setItem('theme', 'light');
     }
 });
+*/
 
 // Typing Animation
 const heroTitle = document.getElementById('hero-title');

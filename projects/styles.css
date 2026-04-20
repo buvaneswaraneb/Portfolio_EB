@@ -135,9 +135,13 @@ body {
   background: rgba(0,0,0,0.7);
   z-index: 195;
   opacity: 0;
+  pointer-events: none;        /* never block page clicks when hidden */
   transition: opacity 0.3s;
 }
-.nav-overlay.visible { opacity: 1; }
+.nav-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;        /* only capture clicks when menu is open */
+}
 
 /* ═══════════════════════════════════════════════════
    PAGE HEADER
@@ -328,6 +332,7 @@ body {
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 2;
+  pointer-events: none; /* let clicks pass through to the card-thumb-link */
 }
 .project-card:hover .card-overlay { opacity: 1; }
 
@@ -477,7 +482,7 @@ body {
   /* Show hamburger */
   .nav-toggle { display: flex; }
 
-  /* Full-screen slide-down drawer */
+  /* Full-screen slide-in drawer */
   .nav-links {
     position: fixed;
     top: 0; right: 0;
@@ -497,31 +502,20 @@ body {
   .nav-links.open { transform: translateX(0); }
   .nav-links a { font-size: 14px; letter-spacing: 2px; }
 
-  /* Show overlay */
+  /* Overlay activates via .visible class — pointer-events handled in base styles */
   .nav-overlay { display: block; }
 
   /* Page header */
   .page-header { padding: calc(var(--nav-h) + 2.5rem) 1.4rem 0; }
 
-  /* Cards: full-width, stacked, no zig-zag */
+  /* Keep horizontal desktop card layout — just tighten spacing */
   .projects-section {
-    padding: 3rem 1rem 5rem;
+    padding: 3rem 0.75rem 5rem;
     gap: 2.5rem;
   }
-  .project-card {
-    width: 100%;
-    align-self: stretch !important;
-    transform: translateY(40px) !important;
-  }
-  .project-card.visible { transform: translateY(0) !important; }
-
-  /* Stack thumb above content */
-  .card-inner { flex-direction: column; min-height: auto; }
-  .card-thumb  { min-height: 220px; flex: none; }
-  .card-body   { padding: 1.6rem 1.6rem 2rem; gap: 0.75rem; }
-
-  .card-title  { font-size: 17px; }
-  .card-desc   { font-size: 12px; max-width: 100%; }
+  .project-card { width: 98%; }
+  .card-body { padding: 1.4rem 1.4rem 1.8rem; }
+  .card-desc { max-width: 100%; }
 
   /* Footer mobile */
   .page-footer { padding: 3rem 1.4rem; font-size: 10px; }
@@ -533,9 +527,7 @@ body {
 @media (max-width: 480px) {
   .nav-logo { font-size: 10px; letter-spacing: 1.5px; }
   .page-label { font-size: 11px; }
-  .card-body { padding: 1.3rem 1.3rem 1.6rem; }
-  .card-title { font-size: 15px; }
-  .card-thumb { min-height: 180px; }
+  .card-body { padding: 1.1rem 1.1rem 1.4rem; }
   .bg-text { font-size: 56px; opacity: 0.04; }
   .page-footer { padding: 2rem 1.2rem; font-size: 9px; }
 }

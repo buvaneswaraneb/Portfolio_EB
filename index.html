@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buvaneswaran E - Portfolio</title>
-    
+
     <!-- Fragment Mono Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress"></div>
 
     <!-- Dark/Light Mode Toggle - Fixed Position -->
-    <div class="theme-toggle-fixed">
-        <input type="checkbox" id="theme-switch">
+    <div class="theme-toggle-fixed" style="display: none;">
+        <input type="checkbox" id="theme-switch" disabled>
         <label for="theme-switch" class="toggle-label">
             <span class="sun">☀</span>
             <span class="moon">🌙</span>
@@ -31,66 +33,152 @@
             <a href="index.html" style="text-decoration: none; color: inherit;">
                 <div class="logo">BUVANESWARAN E</div>
             </a>
-            
+
             <!-- Hamburger Menu -->
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            
+
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link"><span class="bracket">{</span> HOME <span class="bracket">}</span></a></li>
-                <li><a href="projects/index.html" class="nav-link active">PROJECTS</a></li>
+                <li><a href="#home" class="nav-link active"><span class="bracket">{</span> HOME <span
+                            class="bracket">}</span></a></li>
+                <li><a href="projects/index.html" class="nav-link">PROJECTS</a></li>
+                <li><a href="blog/blog.html" class="nav-link">BLOG</a></li>
                 <li><a href="./aboutpg/index.html" class="nav-link">ABOUT</a></li>
+                <li><a href="blog/resume.html" class="nav-link">RESUME</a></li>
+
             </ul>
         </div>
     </nav>
 
     <!-- ─────────────────────────────────────────────────────────────
-         HERO SECTION — unchanged, desktop layout preserved
+         HERO SECTION — Desktop Layout Restructured
     ───────────────────────────────────────────────────────────────── -->
     <section class="hero" id="home">
-        <!-- Large Background Mark -->
-        <span class="bg-mark">EBB</span>
-        
         <div class="hero-container">
-            <!-- Main Title with Typing Effect -->
-            <h1 id="hero-title" class="hero-title">BUVANESWARAN E</h1>
-            
-            <!-- Role Labels -->
-            <span class="role-java">JAVA DEVELOPER (IN DREAM)</span>
-            <span class="role-python">PYTHON DEVELOPER</span>
-            
-            <!-- Location -->
-            <span class="location">
-                <a href="https://share.google/up9NtTkejB7Ia9LZd" style="text-decoration: none; color: inherit;">
-                    CHENNAI, TAMILNADU
-                </a>
-            </span>
-            
-            <!-- Stamp/Badge -->
-            <div class="stamp"></div>
-            
-            <!-- Latest Project Label (desktop only) -->
-            <span class="latest-project">LATEST PROJECT</span>
+            <!-- 2-Column Desktop Grid Area -->
+            <div class="desktop-main-columns">
+                <!-- Left Column -->
+                <div class="desktop-left-col">
+                    <h1 id="hero-title" class="hero-title">E BUVANESWARAN</h1>
+                    <!-- <span class="role-java">JAVA DEVLOPER</span> -->
+                </div>
 
-            <!-- Original project card (desktop only) -->
-            <div class="project-card">
-                <a href="https://github.com/BhuvaneshGg/AI-Vulnerability-Extension" style="text-decoration: none; color: inherit;">
-                    <div class="project-content">
-                        <h3 class="project-title">AI-Vulnerability-Extension</h3>
-                        <p class="project-description">A Visual Studio Extension To Find the Vulnerabilities</p>
-                        <div class="project-tags">
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">API</span>
-                            <span class="tag">Deepseek</span>
-                            <span class="tag">CyberSecurity</span>
+                <!-- Right Column -->
+                <div class="desktop-right-col">
+                    <div class="blog-placeholder">
+                        <div class="blog-header-row">
+                            <h2 class="blog-header">LATEST BLOG POST</h2>
+                            <span class="blog-count">1 POST</span>
                         </div>
+
+                        <a href="#" class="blog-post-item">
+                            <div class="blog-post-meta">
+                                <span class="blog-post-date">APR 2025</span>
+                                <span class="blog-post-tag">AI / DEV TOOLS</span>
+                            </div>
+                            <h3 class="blog-post-title">Building an AI-Powered VS Code Extension from Scratch</h3>
+                            <p class="blog-post-excerpt">How I integrated Hugging Face models into a VS Code extension
+                                to catch security bugs before they ship — and what I learned about prompt engineering
+                                along the way.</p>
+                            <span class="blog-post-cta">READ MORE →</span>
+                        </a>
                     </div>
-                </a>
+                </div>
             </div>
+
+            <!-- Bottom Row: Latest Projects -->
+            <div class="desktop-projects-section">
+                <div class="desktop-projects-header">Latest Projects</div>
+                <div class="desktop-projects-grid">
+
+                    <!-- Card 1 -->
+                    <div class="d-project-card">
+                        <a href="projects/project/project_1/project_1.html">
+                            <div class="d-card-visual" style="--chue:12;">
+                                <span class="d-card-num">01</span>
+                            </div>
+                            <div class="d-card-info">
+                                <h3 class="d-project-title">AI Vulnerability Scanner</h3>
+                                <p class="d-project-desc">A VS Code extension that leverages AI to scan code for
+                                    security vulnerabilities, reporting severity levels and suggesting actionable fixes.
+                                </p>
+                                <div class="d-card-tags">
+                                    <span class="d-tag">TypeScript</span>
+                                    <span class="d-tag">Python</span>
+                                    <span class="d-tag">Hugging Face</span>
+                                </div>
+                                <div class="d-card-footer">
+                                    <span class="d-view-link">VIEW PROJECT →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="d-project-card">
+                        <a href="projects/project/project_2/project-leap-vital-care.html">
+                            <div class="d-card-visual" style="--chue:195;">
+                                <span class="d-card-num">02</span>
+                            </div>
+                            <div class="d-card-info">
+                                <h3 class="d-project-title">LEAP VITAL CARE</h3>
+                                <p class="d-project-desc">Real-time IoT patient monitoring with live vitals, GPS
+                                    tracking, and emergency alerts. Ensures fast medical assistance.</p>
+                                <div class="d-card-tags">
+                                    <span class="d-tag">ESP32</span>
+                                    <span class="d-tag">Flask</span>
+                                    <span class="d-tag">Chart.js</span>
+                                </div>
+                                <div class="d-card-footer">
+                                    <span class="d-view-link">VIEW PROJECT →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="d-project-card">
+                        <a href="#">
+                            <div class="d-card-visual" style="--chue:105;">
+                                <span class="d-card-num">03</span>
+                            </div>
+                            <div class="d-card-info">
+                                <h3 class="d-project-title">Web Automation Bot</h3>
+                                <p class="d-project-desc">Python bot that logs in and collects daily rewards
+                                    automatically, with a polished desktop GUI.</p>
+                                <div class="d-card-tags">
+                                    <span class="d-tag">Python</span>
+                                    <span class="d-tag">Selenium</span>
+                                    <span class="d-tag">CustomTkinter</span>
+                                </div>
+                                <div class="d-card-footer">
+                                    <span class="d-view-link">COMING SOON →</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Desktop Footer -->
+            <div class="desktop-footer">
+                © 2025 Buvaneswaran E — All rights reserved.
+            </div>
+
+            <!-- Elements hidden on desktop but required for JS/mobile to work properly -->
+            <div class="desktop-hidden">
+                <span class="location">
+                    <a href="https://share.google/up9NtTkejB7Ia9LZd" style="text-decoration: none; color: inherit;">
+                        CHENNAI, TAMILNADU
+                    </a>
+                </span>
+                <div class="stamp"></div>
+            </div>
+
         </div>
     </section>
 
@@ -121,13 +209,15 @@
                 </div>
                 <div class="stack-info">
                     <h3 class="stack-title">AI Vulnerability Scanner</h3>
-                    <p class="stack-desc">VS Code extension using AI to detect security vulnerabilities with severity levels and actionable fixes.</p>
+                    <p class="stack-desc">VS Code extension using AI to detect security vulnerabilities with severity
+                        levels and actionable fixes.</p>
                     <div class="stack-tags">
                         <span class="s-tag">TypeScript</span>
                         <span class="s-tag">Python</span>
                         <span class="s-tag">Hugging Face</span>
                     </div>
-                    <a href="projects/project/project_1/project_1.html" class="stack-cta">View Project <span>→</span></a>
+                    <a href="projects/project/project_1/project_1.html" class="stack-cta">View Project
+                        <span>→</span></a>
                 </div>
             </div>
 
@@ -138,13 +228,15 @@
                 </div>
                 <div class="stack-info">
                     <h3 class="stack-title">LEAP VITAL CARE</h3>
-                    <p class="stack-desc">Real-time IoT patient monitoring with live vitals, GPS tracking, and emergency alerts.</p>
+                    <p class="stack-desc">Real-time IoT patient monitoring with live vitals, GPS tracking, and emergency
+                        alerts.</p>
                     <div class="stack-tags">
                         <span class="s-tag">ESP32</span>
                         <span class="s-tag">Flask</span>
                         <span class="s-tag">Chart.js</span>
                     </div>
-                    <a href="projects/project/project_2/project-leap-vital-care.html" class="stack-cta">View Project <span>→</span></a>
+                    <a href="projects/project/project_2/project-leap-vital-care.html" class="stack-cta">View Project
+                        <span>→</span></a>
                 </div>
             </div>
 
@@ -155,7 +247,8 @@
                 </div>
                 <div class="stack-info">
                     <h3 class="stack-title">Web Automation Bot</h3>
-                    <p class="stack-desc">Python bot that logs in and collects daily rewards automatically, with a polished desktop GUI.</p>
+                    <p class="stack-desc">Python bot that logs in and collects daily rewards automatically, with a
+                        polished desktop GUI.</p>
                     <div class="stack-tags">
                         <span class="s-tag">Python</span>
                         <span class="s-tag">Selenium</span>
@@ -175,7 +268,8 @@
                         <h3 class="stack-title">Manhwa Tracker</h3>
                         <span class="stack-wip">In Progress</span>
                     </div>
-                    <p class="stack-desc">Cross-platform app to track manhwa series with automated data fetching and reading lists.</p>
+                    <p class="stack-desc">Cross-platform app to track manhwa series with automated data fetching and
+                        reading lists.</p>
                     <div class="stack-tags">
                         <span class="s-tag">Flutter</span>
                         <span class="s-tag">Spring Boot</span>
@@ -202,4 +296,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>

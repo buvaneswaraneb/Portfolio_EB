@@ -2,6 +2,14 @@
 const themeSwitch = document.getElementById('theme-switch');
 const body = document.body;
 
+// Force dark mode globally for now
+body.classList.add('dark-mode');
+if (themeSwitch) {
+    themeSwitch.checked = true;
+    themeSwitch.disabled = true;
+}
+
+/*
 // Check for saved theme preference or default to light mode
 const currentTheme = sessionStorage.getItem('theme') || 'light';
 if (currentTheme === 'dark') {
@@ -18,6 +26,7 @@ themeSwitch.addEventListener('change', function() {
         sessionStorage.setItem('theme', 'light');
     }
 });
+*/
 
 // Smooth Typing Animation for {INFO}
 const typingText = document.querySelector('.typing-text');
