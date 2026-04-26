@@ -680,4 +680,30 @@ body.dark-mode .toggle-label .moon {
         font-size: 9px;
     }
 }
+
+/* Ultra-mobile fixes */
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+    
+    .hero-container {
+        padding: 0 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .description {
+        font-size: 0.95rem;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .social-link {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+}
 }
